@@ -3,7 +3,6 @@ import LandingPage from "./components/landingPage/LandingPage";
 import "./App.css";
 import Loader from "./components/loader/Loader";
 import Gamer from "./components/Gamer/Gamer";
-
 function App() {
   const [isQuizStarted, setIsQuizStarted] = useState(false);
 

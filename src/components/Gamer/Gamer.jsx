@@ -24,8 +24,6 @@ const Gamer = () => {
     return () => window.removeEventListener("resize", updateDimension);
   }, []);
 
-  console.log(width, height);
-
   // fetch new questions
   useEffect(() => {
     if (!quizSubmitted) {
@@ -44,12 +42,9 @@ const Gamer = () => {
             };
           });
           setQuizDataStore(decodedQuestionsData);
-          console.log(decodedQuestionsData);
         });
     }
   }, [quizSubmitted]);
-
-  console.log(quizDataStore.map((correct) => correct.correct_answer));
 
   useEffect(() => {
     // shuffle answer each time question is chna
@@ -62,7 +57,6 @@ const Gamer = () => {
       );
     });
     setShuffleAnswer(newArray);
-    console.log(newArray);
   }, [quizDataStore]);
 
   const questionElement = quizDataStore.map((quizData, index) => (
